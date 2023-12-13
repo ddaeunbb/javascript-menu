@@ -1,4 +1,4 @@
-import { ERROR_HEADER } from '../constants/error';
+const { ERROR_HEADER } = require('../constants/error');
 
 class CustomError extends Error {
   constructor(message, name = 'CustomError') {
@@ -7,4 +7,4 @@ class CustomError extends Error {
   }
 }
 
-export default CustomError;
+module.exports = CustomError;
