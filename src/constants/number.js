@@ -9,5 +9,11 @@ const LEN_FOODNAME = Object.freeze({
   max: 2,
 })
 
+const RANDOM_NUM = Object.freeze({
+  start: 1,
+  end: 5,
+})
+
 exports.LEN_COACHNAME = LEN_COACHNAME;
 exports.LEN_FOODNAME = LEN_FOODNAME;
+exports.RANDOM_NUM = RANDOM_NUM;

@@ -4,6 +4,7 @@ class App {
 	#controller = new MenuController();
   play() {
 		this.#controller.fillOutNameAndFood();
+		this.#controller.drawCategoryAndMenu();
 	}
 }
 

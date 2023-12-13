@@ -1,6 +1,4 @@
-const MissionUtils = require('@woowacourse/mission-utils');
-
-const { Console} = MissionUtils;
+const { Console } = require('@woowacourse/mission-utils');
 const { INPUT_MESSAGE }= require('../constants/message')
 
 const InputView = Object.freeze({
