@@ -17,6 +17,20 @@ class MenuController {
 
   drawCategoryAndMenu() {
     this.#drawMachine.drawCategory();
+    const canEatList = this.#coachDataList.listUpCantEatFoods();
+    this.#drawMachine.drawMenu(canEatList);
+  }
+
+  announceDrawResult() {
+    OutputView.printResultPhrase();
+    const totalCategory = this.#drawMachine.getTotalCategory();
+    OutputView.printTotalCategory(totalCategory);
+    const totalCoaches = this.#coachDataList.getTotalCoachNames();
+    const totalMenu = this.#drawMachine.getTotalMenu();
+    totalMenu.forEach((menu, idx) => {
+      OutputView.printTotalMenu(totalCoaches[idx], menu);
+    })
+    OutputView.printFinishDraw();
   }
 }
 

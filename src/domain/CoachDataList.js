@@ -10,7 +10,6 @@ const { SYMBOL } = require('../constants/symbol');
  */
 class CoachDataList {
   #coachList = new Map();
-  #drawMenuList = new Map();
 
   constructor(coachNameArr) {
     CoachNamesValidator.validateCoachNames(coachNameArr);
@@ -26,8 +25,19 @@ class CoachDataList {
         FoodNamesValidator.validateFoodNames(foodStrArr);
         this.#coachList.set(name, foodStrArr);
       }
-      this.#drawMenuList.set(name, []);
     })
+  }
+
+  listUpCantEatFoods() {
+    const cantEatFoodList = [];
+    this.#coachList.forEach((foodArr) => {
+      cantEatFoodList.push(foodArr);
+    })
+    return cantEatFoodList;
+  }
+
+  getTotalCoachNames() {
+    return [...this.#coachList.keys()];
   }
 }
 

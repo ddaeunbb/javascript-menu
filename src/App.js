@@ -5,6 +5,7 @@ class App {
   play() {
 		this.#controller.fillOutNameAndFood();
 		this.#controller.drawCategoryAndMenu();
+		this.#controller.announceDrawResult();
 	}
 }
 
