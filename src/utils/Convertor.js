@@ -1,11 +1,11 @@
 const { SYMBOL } = require('../constants/symbol');
 
 /**
-* 코치 이름을 쉼표 기준으로 문자열 배열로 바꿔주는 함수
-* @param {string} coachNames
+* 문자열을 쉼표 기준으로 문자열 배열로 바꿔주는 함수
+* @param {string} str
 * @return {string[]}
 */
-const coachNamesConvertor = (coachNames) => coachNames.split(SYMBOL.comma);
+const strTostrArrConvertor = (str) => str.split(SYMBOL.comma);
 
 
-exports.coachNamesConvertor = coachNamesConvertor;
+exports.strTostrArrConvertor = strTostrArrConvertor;

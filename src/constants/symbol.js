@@ -1,5 +1,6 @@
 const SYMBOL = Object.freeze({
   comma: ',',
+  none: '',
 });
 
 

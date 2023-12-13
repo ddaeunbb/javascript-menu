@@ -10,6 +10,14 @@ const InputView = Object.freeze({
       input = names;
     });
     return input;
+  },
+
+  readCantEatFoods(name) {
+    let input = '';
+    Console.readLine(`${name}${INPUT_MESSAGE.readCantEatFoods}`, (foods) => {
+      input = foods;
+    });
+    return input;
   }
 });
 

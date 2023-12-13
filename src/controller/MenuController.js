@@ -1,15 +1,15 @@
 const OutputView = require('../view/OutputView');
 const InputView = require('../view/InputView');
 const CoachDataList = require('../domain/CoachDataList');
-const { coachNamesConvertor } = require('../utils/Convertor');
+const { strTostrArrConvertor } = require('../utils/Convertor');
 
 class MenuController {
   #coachDataList;
 
-  startMenuDraw() {
+  fillOutNameAndFood() {
     OutputView.printStartDraw();
     const coachNames = InputView.readCoachNames();
-    const coachNameArr = coachNamesConvertor(coachNames);
+    const coachNameArr = strTostrArrConvertor(coachNames);
     this.#coachDataList =  new CoachDataList(coachNameArr);
   }
 }

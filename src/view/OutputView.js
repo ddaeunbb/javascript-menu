@@ -1,7 +1,7 @@
 const MissionUtils = require('@woowacourse/mission-utils');
-
-const { Console} = MissionUtils;
 const { OUTPUT_MESSAGE }= require('../constants/message')
+
+const { Console } = MissionUtils;
 
 const OutputView = Object.freeze({
   printStartDraw() {
