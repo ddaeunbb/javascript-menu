@@ -21,16 +21,13 @@ class FoodNamesValidator {
     if(!REG_KO.test(food)) throw new CustomError(ERROR_MESSAGE.shouldKoreanFood);
   }
   /**
-  * 문자열이 한글로 이뤄져있는지 확인하는 메서드
+  * 입력한 메뉴가 메뉴판에 포함되어있는지 확인하는 메서드
   * @param {string} food
   */
   static isIncludedInMenu(food) {
     if(!ALL_FOODS.includes(food)) throw new CustomError(ERROR_MESSAGE.shouldIncludedInMenu);
   }
-  /**
-  * 문자열이 한글로 이뤄져있는지 확인하는 메서드
-  * @param {string[]} foodStrArr
-  */
+
   static validateFoodNames(foodStrArr) {
     this.isLenBetweenOneOrTwo(foodStrArr);
     foodStrArr.forEach(food => {
